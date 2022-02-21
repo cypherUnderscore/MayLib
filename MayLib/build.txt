@@ -1,0 +1,4 @@
+displayName = Mayhemm Library (temp name)
+author = Mayhemm
+version = 0.1
+includeSource = true

@@ -1,0 +1,4 @@
+DISCLAIMER: THIS LIBRARY IS CURRENTLY HIGHLY UNFINISHED AND UNOPTIMIZED. DO NOT ATTEMPT TO USE THIS VERSION OF THE MOD FOR ANY PROJECTS WHATSOEVER.
+
+This is a library mod that I decided to create one day because I make too many mods.
+Also haha primtrails go brr
