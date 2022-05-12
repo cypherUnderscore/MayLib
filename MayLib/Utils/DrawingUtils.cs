@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Terraria;
 
-namespace MayLib.Utils.Drawing
+namespace MayLib.Utils
 {
-    public static class SpriteDrawingUtils
+    public static class DrawingUtils
     {
         public static void DrawMultiframeSprite(Vector2 drawPos, float rotation, float scale, Texture2D sprite, int frameCount, int currentFrame, Color drawColour, SpriteEffects effects = SpriteEffects.None)
         {
@@ -49,6 +49,11 @@ namespace MayLib.Utils.Drawing
             Vector2 drawOrigin = new Vector2(sprite.Width * 0.5f, sprite.Height * 0.5f);
             Vector2 pos = drawPos - Main.screenPosition;
             Main.EntitySpriteDraw(sprite, pos, frame, drawColour, rotation, drawOrigin, scale, effects, 0);
+        }
+
+        public static Color SetA(this Color colour, int newAlpha)
+        {
+            return new Color(colour.R, colour.G, colour.B, newAlpha);
         }
     }
 }

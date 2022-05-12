@@ -1,4 +1,4 @@
-﻿using Terraria;
+﻿/*using Terraria;
 using Terraria.ModLoader;
 using Terraria.GameContent;
 using Terraria.DataStructures;
@@ -97,7 +97,7 @@ namespace MayLib.Utils
         /// <param name="speedMultiplier">The speed of the projectiles</param>
         /// <param name="ai0"></param>
         /// <param name="ai1"></param>
-        public static void SpawnEvenProjectileSpread(IProjectileSource source, Vector2 position, Vector2 direction, int type, int damage, float knockback, int owner, int amount, int spreadDegrees, float speedMultiplier = 1, float ai0 = 0, float ai1 = 0)
+        public static void SpawnEvenProjectileSpread(IEntitySource source, Vector2 position, Vector2 direction, int type, int damage, float knockback, int owner, int amount, int spreadDegrees, float speedMultiplier = 1, float ai0 = 0, float ai1 = 0)
         {
             for (int p = 0; p < amount; p++)
             {
@@ -120,7 +120,7 @@ namespace MayLib.Utils
         /// <param name="ai0"></param>
         /// <param name="ai1"></param>
         /// <param name="rotationOffset">The offset of the projectile ring's rotation</param>
-        public static void SpawnProjectileRing(IProjectileSource source, Vector2 position, int amount, int damage, int type, float speed, float knockback, int owner, float ai0 = 0, float ai1 = 0, float rotationOffset = 0)
+        public static void SpawnProjectileRing(IEntitySource source, Vector2 position, int amount, int damage, int type, float speed, float knockback, int owner, float ai0 = 0, float ai1 = 0, float rotationOffset = 0)
         {
             for (int p = 0; p < amount; p++)
             {
@@ -173,9 +173,9 @@ namespace MayLib.Utils
         public static Color SetA(this Color colour, int newAlpha)
         {
             return new Color(colour.R, colour.G, colour.B, newAlpha);
-        }
+        }*/
 
-        /// <summary>
+        /*/// <summary>
         /// Spawns generic smoke cloud gore effects.
         /// </summary>
         /// <param name="position">The origin for the gores</param>
@@ -187,8 +187,8 @@ namespace MayLib.Utils
                 g.velocity *= 0.4f;
                 g.velocity += new Vector2(1, 1).RotatedBy(MathHelper.PiOver2 * i);
             }
-        }
-
+        }*/
+        /*
         public static bool CanBeFriendlyHomingTarget(NPC target, Projectile attacker, bool lineOfSight = true) //decides whether or not the specified projectile can home in on the specified NPC
         {
             if (!target.friendly && target.lifeMax > 5 && target.CanBeChasedBy(attacker, false) && target.active && target.life > 0 && (Collision.CanHit(attacker.Center, 1, 1, target.Center, 1, 1) || !lineOfSight)) return true;
@@ -237,4 +237,4 @@ namespace MayLib.Utils
             return array;
         }
     }
-}
+}*/

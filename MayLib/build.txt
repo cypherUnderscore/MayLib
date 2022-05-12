@@ -1,4 +1,4 @@
-displayName = Mayhemm Library (temp name)
+displayName = stitches
 author = Mayhemm
 version = 0.1
 includeSource = true

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Terraria;
 
-namespace MayLib.Utils.Drawing
+namespace MayLib.Core.Graphics.ParticleSystem
 {
     public abstract class EffectParticle
     {

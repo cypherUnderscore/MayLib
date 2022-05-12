@@ -11,7 +11,6 @@ using Terraria.ModLoader;
 using Terraria.GameContent;
 
 using MayLib.Common.PlayerLayers;
-using MayLib.Utils.Maths;
 using Terraria.ID;
 
 namespace MayLib.Utils.Content
@@ -22,8 +21,6 @@ namespace MayLib.Utils.Content
         {
             Shoot = 0
         }
-
-        public override bool CloneNewInstances => true;
 
         public bool CanBeHeld => Main.player[Projectile.owner].channel && !Main.player[Projectile.owner].noItems && !Main.player[Projectile.owner].CCed;
 
@@ -73,7 +70,7 @@ namespace MayLib.Utils.Content
 
             if (heldActive || !lockAngleAfterRelease)
             {
-                aimNormal = MainUtils.GetVectorTowards(owner.MountedCenter, Main.MouseWorld);
+                aimNormal = MathUtils.GetNormalTowards(owner.MountedCenter, Main.MouseWorld);
                 aimAngle = aimNormal.ToRotation();
                 aimDirection = Main.MouseWorld.X > owner.MountedCenter.X ? 1 : -1;
             }

@@ -6,10 +6,8 @@ using MayLib.Utils;
 	
 namespace MayLib.Utils.Content
 {
-	public abstract class DynamicHoldoutAnim : ModProjectile
+	public abstract class DynamicHoldoutAnimDEPRECATED : ModProjectile
 	{
-		public override bool CloneNewInstances => true;
-
 		/// <summary>
 		/// The time (in ticks) that the weapon has been actively held for.
 		/// </summary>
@@ -117,7 +115,7 @@ namespace MayLib.Utils.Content
 		public Vector2 AimDirection()
 		{
 			Player projOwner = Main.player[Projectile.owner];
-			return MainUtils.GetVectorTowards(projOwner.MountedCenter, Main.MouseWorld);
+			return MathUtils.GetNormalTowards(projOwner.MountedCenter, Main.MouseWorld);
 		}
 
 		public static void DynamicHoldoutItemDefaults(ModItem item)

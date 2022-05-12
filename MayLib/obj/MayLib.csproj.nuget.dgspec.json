@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alistair\\Documents\\My Games\\Terraria\\ModLoader\\Beta\\Mod Sources\\MayLib\\MayLib.csproj": {}
+    "C:\\Users\\Alistair\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MayLib\\MayLib.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alistair\\Documents\\My Games\\Terraria\\ModLoader\\Beta\\Mod Sources\\MayLib\\MayLib.csproj": {
+    "C:\\Users\\Alistair\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MayLib\\MayLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alistair\\Documents\\My Games\\Terraria\\ModLoader\\Beta\\Mod Sources\\MayLib\\MayLib.csproj",
+        "projectUniqueName": "C:\\Users\\Alistair\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MayLib\\MayLib.csproj",
         "projectName": "MayLib",
-        "projectPath": "C:\\Users\\Alistair\\Documents\\My Games\\Terraria\\ModLoader\\Beta\\Mod Sources\\MayLib\\MayLib.csproj",
+        "projectPath": "C:\\Users\\Alistair\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MayLib\\MayLib.csproj",
         "packagesPath": "C:\\Users\\Alistair\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alistair\\Documents\\My Games\\Terraria\\ModLoader\\Beta\\Mod Sources\\MayLib\\obj\\",
+        "outputPath": "C:\\Users\\Alistair\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MayLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alistair\\AppData\\Roaming\\NuGet\\NuGet.Config",

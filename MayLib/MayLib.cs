@@ -6,6 +6,9 @@ using Microsoft.Xna.Framework;
 using MayLib.Utils.Drawing;
 using System.Collections.Generic;
 using System;
+using MayLib.Core.Graphics.Primitives;
+using MayLib.Core.Graphics.ParticleSystem;
+using MayLib.Core.Graphics.Drawing;
 
 namespace MayLib
 {
@@ -14,6 +17,8 @@ namespace MayLib
         internal static MayLib instance;
 
         public static PrimTrailManager primManager;
+
+        public static MeshRenderer primRenderer;
 
         //public static AnimatedEffectManager effectManager;
 
@@ -41,7 +46,10 @@ namespace MayLib
             additiveManager = new AdditiveBlendDrawManager();
             abovePlayerManager = new DrawAbovePlayerManager();
 
+            primRenderer = new MeshRenderer();
+
             primManager.Initialize();
+            primRenderer.Initialize();
         }
 
         public override void Unload()
@@ -55,6 +63,8 @@ namespace MayLib
             primManager = null;
             additiveManager = null;
             abovePlayerManager = null;
+
+            primRenderer = null;
         }
 
         private void Main_OnDrawProjs(On.Terraria.Main.orig_DrawProjectiles orig, Main self)
@@ -63,6 +73,8 @@ namespace MayLib
 
             if(primManager != null) primManager.DrawAllTrails();
             additiveManager.CallProjAdditiveDraws();
+
+            if (primRenderer != null) primRenderer.RenderAll();
             orig(self);
         }
 

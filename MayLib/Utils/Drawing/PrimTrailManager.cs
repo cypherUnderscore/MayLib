@@ -52,7 +52,7 @@ namespace MayLib.Utils.Drawing
 
         private void HandleTrail(PrimTrailBase t)
         {
-            MeshData mesh = CreateMesh(t);
+            OldMeshData mesh = CreateMesh(t);
             RenderTrail(t, mesh);
         }
 
@@ -97,7 +97,7 @@ namespace MayLib.Utils.Drawing
             return tempMesh;
         }*/
 
-        private MeshData CreateMesh(PrimTrailBase trail)
+        private OldMeshData CreateMesh(PrimTrailBase trail)
         {
             VertexPositionColorTexture[] tempVertices = new VertexPositionColorTexture[(trail.trailPath.Length * 2)];
             List<short> tempIndices = new List<short>();
@@ -110,16 +110,13 @@ namespace MayLib.Utils.Drawing
                 float width = MathHelper.Lerp(trail.trailHeadWidth, trail.trailTailWidth, trailProgress);
 
                 Vector2 toNextPoint = t == length - 1 ? trail.trailPath[t] - trail.trailPath[t - 1] : trail.trailPath[t + 1] - trail.trailPath[t];
-
                 Vector2 perpendicularToPoint = Vector2.Normalize(toNextPoint).RotatedBy(-MathHelper.PiOver2);
-
                 Vector2 top = trail.trailPath[t] + perpendicularToPoint * width;
                 Vector2 bottom = trail.trailPath[t] - (perpendicularToPoint * width);
-
-                Color vertexColour = Color.Lerp(trail.headColour, trail.tailColour, trailProgress);
-
                 Vector2 topTexCoord = new(trailProgress, 0);
                 Vector2 bottomTexCoord = new(trailProgress, 1);
+
+                Color vertexColour = Color.Lerp(trail.headColour, trail.tailColour, trailProgress);
 
                 tempVertices[t] = new VertexPositionColorTexture(new Vector3(GetDrawPos(top), 0), vertexColour, topTexCoord);
                 tempVertices[t + length] = new VertexPositionColorTexture(new Vector3(GetDrawPos(bottom), 0), vertexColour, bottomTexCoord);
@@ -149,10 +146,10 @@ namespace MayLib.Utils.Drawing
                 tempVertices[v].Position.Y *= zoom.Y;
             }
 
-            return new MeshData(tempVertices, tempIndices.ToArray());
+            return new OldMeshData(tempVertices, tempIndices.ToArray());
         }
 
-        private void RenderTrail(PrimTrailBase t, MeshData mesh)
+        private void RenderTrail(PrimTrailBase t, OldMeshData mesh)
         {
             //t.vertexBuffer.SetData(0, mesh.vertices, 0, mesh.vertices.Length, VertexPositionColorTexture.VertexDeclaration.VertexStride, SetDataOptions.Discard);
             t.vertexBuffer.SetData(mesh._vertices);
@@ -185,12 +182,12 @@ namespace MayLib.Utils.Drawing
             return drawPos;
         }
 
-        public struct MeshData
+        public struct OldMeshData
         {
             public VertexPositionColorTexture[] _vertices;
             public short[] _indices;
 
-            public MeshData(VertexPositionColorTexture[] vertices, short[] indices)
+            public OldMeshData(VertexPositionColorTexture[] vertices, short[] indices)
             {
                 _vertices = vertices;
                 _indices = indices;

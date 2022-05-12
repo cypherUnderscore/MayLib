@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iHgVu14Xd+trmCvL1bt+Kir0+4vkV0SPus9d98B+lJ8Yi+TscLhyrm3Oz2fKonmo3FsYbPyjViFAuk5bzh7d4Q==",
+  "dgSpecHash": "b/WoQhi5HQAmH0m+5QXcIFzZL2roF4aCrkKObaPevVSF6auMOqDq+S9U1EcfOo6A2xsPWAJqSjrx+vdB5KLYMg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alistair\\Documents\\My Games\\Terraria\\ModLoader\\Beta\\Mod Sources\\MayLib\\MayLib.csproj",
+  "projectFilePath": "C:\\Users\\Alistair\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\MayLib\\MayLib.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alistair\\.nuget\\packages\\tmodloader.codeassist\\0.1.3\\tmodloader.codeassist.0.1.3.nupkg.sha512"
   ],
